@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <title>Tartas 3F</title>
     <script>
+        function otworzSrodek(url, nazwa, szerokosc, wysokosc) {
+            const left = Math.round((screen.availWidth - szerokosc) / 2);
+            const top = Math.round((screen.availHeight - wysokosc) / 2);
+            window.open(url, nazwa, "toolbar=no,directories=no,menubar=no,height=" + wysokosc + ",width=" + szerokosc + ",top=" + top + ",left=" + left);
+        }
+
         function WinOpen_z1() {
-            window.open("Zad1/zadanie1_tart.html", "okienko_z1", "toolbar=no,directories=no,menubar=no,height=300,width=400,top=200,left=200");
+            otworzSrodek("Zad1/zadanie1_tart.html", "okienko_z1", 400, 300);
         }
 
         function WinOpen_z2() {
-            window.open("Zad2/zadanie2_tart.html", "okienko_z2", "toolbar=no,directories=no,menubar=no,height=500,width=500,top=200,left=300");
+            otworzSrodek("Zad2/zadanie2_tart.html", "okienko_z2", 500, 500);
         }
 
         function WinOpen_z3() {
-            window.open("Zad3/obraz.html", "okienko_z3", "toolbar=no,directories=no,menubar=no,height=475,width=490,top=200,left=200");
+            otworzSrodek("Zad3/obraz.html", "okienko_z3", 490, 475);
         }
 
         function WinOpen_z4() {
-            window.open("Zad4/zadanie4_tart.html", "okienko_z4", "toolbar=no,directories=no,menubar=no,height=1000,width=1000,top=200,left=400");
+            otworzSrodek("Zad4/zadanie4_tart.html", "okienko_z4", 500, 500);
         }
 
         function WinOpen_z5() {
-            window.open("Zad5/zadanie5_tart.html", "okienko_z5", "toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=500");
+            otworzSrodek("Zad5/zadanie5_tart.html", "okienko_z5", 600, 500);
         }
 
         function okno_zamknij() {

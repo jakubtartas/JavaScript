@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tartas 3F</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+    <script>
+        function WinOpen_tartas_1() {
+            window.open('grafika1_tart.html', 'grafika_tartas_1', 'width=460,height=620,top=20,left=20,toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no');
+        }
+
+        function WinOpen_tartas_2() {
+            window.open('grafika2_tart.html', 'grafika_tartas_2', 'width=460,height=620,top=20,left=' + (screen.availWidth - 480) + ',toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no');
+        }
+
+        function WinOpen_tartas_3() {
+            window.open('grafika3_tart.html', 'grafika_tartas_3', 'width=460,height=620,top=' + (screen.availHeight - 640) + ',left=20,toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no');
+        }
+
+        function WinOpen_tartas_4() {
+            window.open('grafika4_tart.html', 'grafika_tartas_4', 'width=460,height=620,top=' + (screen.availHeight - 640) + ',left=' + (screen.availWidth - 480) + ',toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no');
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">wykonał: Jakub Tartas mój numer w dzienniku 26, czyli mam układ [(26) mod 4=2] układ 2</h1>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="WinOpen_tartas_1()">grafika 1</button>
+        <button onclick="WinOpen_tartas_2()">grafika 2</button>
+        <button onclick="WinOpen_tartas_3()">grafika 3</button>
+        <button onclick="WinOpen_tartas_4()">grafika 4</button>
+    </div>
+</body>
+</html>

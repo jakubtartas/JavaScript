@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 4 - Tartas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin: 30px;
+            background-color: #f8f8f8;
+        }
+        strong {
+            color: #000;
+        }
+        .answer {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <strong>1) Kiedy powstał JavaScript (podaj datę).</strong><br>
+    JavaScript powstał w 1995 roku, dokładnie w czerwcu 1995 roku.
+
+    <br><br>
+    <strong>2) Dlaczego jest to język skryptowy?</strong><br>
+    Jest to język skryptowy, ponieważ służy do wykonywania krótkich instrukcji i poleceń w określonym środowisku, bez potrzeby kompilacji do osobnego programu wykonywalnego. Kod JavaScript jest odczytywany i wykonywany przez przeglądarkę w czasie działania strony.
+
+    <br><br>
+    <strong>3) Gdzie jest wykonywany JS (klient czy serwer)?</strong><br>
+    JavaScript jest wykonywany głównie po stronie klienta, czyli w przeglądarce użytkownika. Może być też używany po stronie serwera, np. w Node.js, ale najczęściej działa w przeglądarce.
+
+    <br><br>
+    <strong>4) Dlaczego jest to bezpieczne narzędzie?</strong><br>
+    JavaScript jest uznawany za stosunkowo bezpieczne narzędzie, ponieważ działa w kontrolowanym środowisku przeglądarki i ma ograniczony dostęp do zasobów systemu. Nie może swobodnie kontrolować całego komputera użytkownika, tylko wykonuje zadania w ramach przeglądarki i strony internetowej.
+
+    <br><br>
+    <strong>5) Czy jest to język obiektowy, jeśli tak to dlaczego.</strong><br>
+    Tak, JavaScript jest językiem obiektowym, ponieważ działa na bazie obiektów, które mają właściwości i metody. Można tworzyć obiekty, modyfikować je i wykorzystywać do budowania bardziej złożonych programów. W JavaScript wszystko nie musi być klasyczne, ale obiektowy model działania jest jednym z fundamentów języka.
+
+    <br><br>
+    <strong>6) Wymień zalety JS:</strong><br>
+    Zaleta 1: Jest prosty w użyciu i szybki do nauki.<br>
+    Zaleta 2: Działa w przeglądarkach bez instalowania dodatkowego oprogramowania.<br>
+    Zaleta 3: Pozwala tworzyć interaktywne strony internetowe i dynamiczne efekty.
+
+    <br><br>
+    <strong>7) Framework to:</strong><br>
+    Framework to gotowy zestaw narzędzi, bibliotek i zasad programowania, który ułatwia tworzenie aplikacji. Zamiast pisać wszystko od zera, programista korzysta z wcześniej przygotowanych rozwiązań.
+
+    <br><br>
+    <strong>8) Do aplikacji mobilnych można użyć Framework?</strong><br>
+    Tak, do tworzenia aplikacji mobilnych można użyć frameworków, takich jak React Native, Ionic, Flutter czy NativeScript. Umożliwiają one budowę aplikacji na urządzenia mobilne z wykorzystaniem technologii webowych.
+
+    <br><br>
+    <strong>9) Aplikacje responsywne to:</strong><br>
+    Aplikacje responsywne to takie, które dostosowują swój układ i wygląd do różnych rozmiarów ekranów, np. komputerów, tabletów i telefonów. Dzięki temu strona wygląda poprawnie niezależnie od urządzenia.
+
+    <br><br>
+    <strong>10) Przepisz linie kodu i pod nimi wyjaśnienie, jak działa ten fragment kodu.</strong><br>
+    <code>&lt;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"&gt;</code><br>
+    To pole jest przyciskiem typu button. Atrybut value określa tekst wyświetlany na przycisku, czyli „Nowa Strona”. Po kliknięciu uruchamia się zdarzenie onclick, które wywołuje funkcję WinOpen(' '). Funkcja ta może otworzyć nową stronę lub okno. W praktyce ten element tworzy interaktywny przycisk, który uruchamia określoną akcję po naciśnięciu.
+
+    <br><br>
+    <strong>11) Przepisz linię kodu i pod nią wyjaśnienie, jak działa ten fragment kodu.</strong><br>
+    <code>window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");</code><br>
+    To polecenie otwiera nowe okno przeglądarki. Parametr "obraz.html" to nazwa strony, która ma zostać otwarta. Parametr "okienko" to nazwa okna, dzięki której można je później odwołać. Następne parametry określają wygląd i położenie okna:<br>
+    toolbar=no &rarr; ukrywa pasek narzędzi okna;<br>
+    directories=no &rarr; ukrywa przyciski katalogów lub nawigacji w oknie;<br>
+    menubar=no &rarr; ukrywa pasek menu przeglądarki;<br>
+    height=280 &rarr; ustawia wysokość okna na 280 pikseli;<br>
+    width=160 &rarr; ustawia szerokość okna na 160 pikseli;<br>
+    top=200 &rarr; ustawia odległość od góry ekranu na 200 pikseli;<br>
+    left=200 &rarr; ustawia odległość od lewej strony ekranu na 200 pikseli.<br>
+    Dzięki temu nowe okno otwiera się w określonym rozmiarze i miejscu na ekranie.
+
+    <br><br>
+    <strong>12) Opisz następującą instrukcję window.close().</strong><br>
+    Instrukcja window.close() zamyka aktualne okno przeglądarki lub bieżące okno, z którego została wywołana. Jest używana głównie wtedy, gdy użytkownik kliknie przycisk zamykający okno lub jeśli strona ma sama zamknąć swoje okno po wykonaniu określonej akcji. Działa tylko w określonych warunkach, zwykle w oknach otwartych przez JavaScript.
+</body>
+</html>

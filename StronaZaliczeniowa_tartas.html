@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tartas 3F</title>
+    <script>
+        function WinOpen_z1() {
+            window.open("Zad1/zadanie1_tart.html", "okienko_z1", "toolbar=no,directories=no,menubar=no,height=300,width=400,top=200,left=200");
+        }
+
+        function WinOpen_z2() {
+            window.open("Zad2/zadanie2_tart.html", "okienko_z2", "toolbar=no,directories=no,menubar=no,height=500,width=500,top=200,left=300");
+        }
+
+        function WinOpen_z3() {
+            window.open("Zad3/obraz.html", "okienko_z3", "toolbar=no,directories=no,menubar=no,height=475,width=490,top=200,left=200");
+        }
+
+        function WinOpen_z4() {
+            window.open("Zad4/zadanie4_tart.html", "okienko_z4", "toolbar=no,directories=no,menubar=no,height=1000,width=1000,top=200,left=400");
+        }
+
+        function WinOpen_z5() {
+            window.open("Zad5/zadanie5_tart.html", "okienko_z5", "toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=500");
+        }
+
+        function okno_zamknij() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <font color="red"><h1 align="center">Szkielet zaliczeniowy JavaScript Jakub Tartas klasa 3F</h1></font>
+        <div style="text-align: center; margin-top: 20px;">
+        <input type="button" name="zadanie1" value="zadanie1-tartas" onclick="WinOpen_z1()">
+        <input type="button" name="zadanie2" value="zadanie2-tartas" onclick="WinOpen_z2()">
+        <input type="button" name="zadanie3" value="zadanie3-tartas" onclick="WinOpen_z3()">
+        <input type="button" name="zadanie4" value="zadanie4-tartas" onclick="WinOpen_z4()">
+        <input type="button" name="zadanie5" value="zadanie5-tartas" onclick="WinOpen_z5()">
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+        </div>
+    </form>
+</body>
+</html>

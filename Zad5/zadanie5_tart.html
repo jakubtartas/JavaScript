@@ -25,6 +25,10 @@
         function WinOpen_tartas_4() {
             window.open('grafika4_tart.html', 'grafika_tartas_4', 'width=460,height=620,top=' + (screen.height - 620) + ',left=' + (screen.width - 460) + ',toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no');
         }
+function okno_zamknij()
+{
+window.close()
+}
     </script>
 </head>
 <body>
@@ -35,6 +39,7 @@
         <button onclick="WinOpen_tartas_2()">grafika 2</button>
         <button onclick="WinOpen_tartas_3()">grafika 3</button>
         <button onclick="WinOpen_tartas_4()">grafika 4</button>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
     </div>
 </body>
 </html>

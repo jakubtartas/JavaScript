@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <script type="text/javascript">
+function okno_zamknij()
+{
+window.close()
+}
+</script>
     <meta charset="UTF-8">
     <title>Zadanie 4 - Tartas</title>
     <style>
@@ -83,5 +89,6 @@
     <br><br>
     <strong>12) Opisz następującą instrukcję window.close().</strong><br>
     Instrukcja window.close() zamyka aktualne okno przeglądarki lub bieżące okno, z którego została wywołana. Jest używana głównie wtedy, gdy użytkownik kliknie przycisk zamykający okno lub jeśli strona ma sama zamknąć swoje okno po wykonaniu określonej akcji. Działa tylko w określonych warunkach, zwykle w oknach otwartych przez JavaScript.
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
 </body>
 </html>

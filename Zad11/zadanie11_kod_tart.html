@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczanie sekund KOD</title>
+    </head>
+    <body>
+        <textarea rows="34" cols="85" type="text" readonly> 
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obliczanie sekund</title>
+  </head>
+  <body>
+    <div style="color: green; font-size: 50px;">
+      <script language="JavaScript">
+        var D1_tar = prompt("Data1=", "");
+        var D2_tar = prompt("Data2=", "");
+        var sekund;
+        var a = parseFloat(D1_tar);
+        var b = parseFloat(D2_tar);
+        sekund = (a - b) * 24 * 60 * 60;
+
+        // Jakub Tartas 3.10.2026
+        // Zadanie 11
+
+        document.write(
+          "Ilość sekund między dniami " + a + " i " + b + " = " + sekund + "<br>"
+        );
+
+        function okno_zamknij_tartas() {
+          window.close();
+        }
+      </script>
+    </div>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
+  </body>
+</html>
+        </textarea>
+    </body>
+</html>

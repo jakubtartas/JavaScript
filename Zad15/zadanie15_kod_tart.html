@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczanie sekund KOD</title>
+    </head>
+    <body>
+        <script>
+            function okno_zamknij_tartas(){
+            window.close()
+            }
+        </script>
+        <textarea rows="36" cols="100" type="text" readonly> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozkład ułamka egipskiego na dwa takie same ułamki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #ff0000;
+            margin: 24px;
+        }
+
+        #wynik {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rozkład ułamka egipskiego na dwa takie same ułamki egipskie</h1>
+    <p>Podaj dodatnią liczbę naturalną m, aby rozłożyć 1/m na dwa jednakowe ułamki egipskie.</p>
+
+    <label for="liczba">m = </label>
+    <input type="number" id="liczba" min="1" step="1">
+    <input type="button" value="Oblicz" onclick="oblicz()">
+    <p id="wynik" aria-live="polite"></p>
+
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()">
+
+    <script>
+        function oblicz() {
+            var m = document.getElementById("liczba").valueAsNumber;
+            var wynik = document.getElementById("wynik");
+            var mianownik = 2 * m;
+
+            if (!Number.isSafeInteger(m) || m <= 0) {
+                wynik.textContent = "Podaj poprawną dodatnią liczbę naturalną.";
+                return;
+            }
+
+            if (!Number.isSafeInteger(mianownik)) {
+                wynik.textContent = "Podana liczba jest zbyt duża do obliczenia.";
+                return;
+            }
+
+            wynik.textContent = "1/" + m + " = 1/" + mianownik + " + 1/" + mianownik;
+        }
+
+        function okno_zamknij_tartas() {
+            window.close();
+        }
+    </script>
+</body>
+</html>
+        </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
+    </body>
+</html>

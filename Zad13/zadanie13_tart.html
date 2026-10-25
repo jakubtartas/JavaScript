@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozkład ułamka egipskiego</title>
+</head>
+<style>
+    body {
+        font-size: 30px;
+        color: rgb(255, 0, 0);
+    }
+</style>
+<body>
+    <h1>Rozkład ułamka egipskiego na dwa ułamki egipskie</h1>
+
+    <script>
+        var m_tar = prompt("Podaj dodatnią liczbę naturalną:");
+        var m = parseFloat(m_tar);
+
+        if (Number.isInteger(m) && m > 0) {
+            document.write("<h3>Wynik</h3>");
+            document.write("<p>1/" + m + " = 1/" + (m + 1) + " + 1/" + (m * (m + 1)) + "</p>");
+        } else {
+            document.write("<p>Podaj poprawną dodatnią liczbę naturalną.</p>");
+        }
+    </script>
+</body>
+</html>

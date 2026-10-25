@@ -5,6 +5,11 @@
     <title>Obliczanie sekund KOD</title>
     </head>
     <body>
+      <script language="JavaScript">
+        function okno_zamknij(){
+        window.close()
+      }
+        </script>
         <textarea rows="36" cols="85" type="text" readonly> 
 <!DOCTYPE html>
 <html lang="pl">
@@ -29,6 +34,10 @@
   </head>
   <body>
     <script>
+      function okno_zamknij(){
+        window.close()
+      }
+
         var D1_tar = prompt("Podaj pierwszy dzień miesiąca styczeń: ");
         var G1_tar = prompt("Podaj pierwszą godzinę miesiąca styczeń: ");
         var D2_tar = prompt("Podaj drugi dzień miesiąca styczeń: ");
@@ -40,5 +49,6 @@
   </body>
 </html>
         </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
     </body>
 </html>

@@ -15,6 +15,10 @@
     <h1>Rozkład ułamka egipskiego na dwa ułamki egipskie</h1>
 
     <script>
+        function okno_zamknij(){
+        window.close()
+      }
+
         var m_tar = prompt("Podaj dodatnią liczbę naturalną:");
         var m = parseFloat(m_tar);
 
@@ -24,6 +28,7 @@
         } else {
             document.write("<p>Podaj poprawną dodatnią liczbę naturalną.</p>");
         }
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
     </script>
 </body>
 </html>

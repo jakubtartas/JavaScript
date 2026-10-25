@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opis teorii JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #111;
+            line-height: 1.5;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            text-align: center;
+            border-top: 2px dashed #222;
+            border-bottom: 2px dashed #222;
+            padding: 6px;
+        }
+
+        .pytanie {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 24px;
+        }
+
+        th, td {
+            border: 1px solid #222;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <p class="pytanie">1. Wymień cztery sposoby wyprowadzania danych w JavaScript.</p>
+        <p>Przykładowe sposoby prezentowania danych użytkownikowi:</p>
+        <ul>
+            <li>za pomocą <code>document.write()</code>, który zapisuje treść do dokumentu HTML;</li>
+            <li>za pomocą okna komunikatu <code>alert()</code>;</li>
+            <li>do elementów formularza, na przykład pola tekstowego;</li>
+            <li>do komórek tabeli lub innych elementów strony.</li>
+        </ul>
+    </section>
+
+    <section>
+        <p class="pytanie">2. Czym jest funkcja w JavaScript? Omów, używając czterech podpunktów.</p>
+        <ul>
+            <li>Funkcja to nazwany lub przypisany do zmiennej blok instrukcji wykonujący określone zadanie.</li>
+            <li>Jej kod wykonuje się po jej wywołaniu, na przykład przez podanie nazwy i nawiasów: <code>oblicz()</code>.</li>
+            <li>Funkcja może przyjmować argumenty, które są przekazywane do jej parametrów i wykorzystywane w jej wnętrzu.</li>
+            <li>Funkcja może zwrócić wynik za pomocą słowa kluczowego <code>return</code>; jeśli nie użyje <code>return</code>, zwraca <code>undefined</code>.</li>
+        </ul>
+        <p>Przykład funkcji z argumentami i zwracaną wartością:</p>
+        <pre><code>function suma(a, b) {
+    return a + b;
+}
+
+var wynik = suma(2, 3); // wynik ma wartość 5</code></pre>
+    </section>
+
+    <section>
+        <p class="pytanie">3. Omów metody <code>getElementsByName</code>, <code>getElementById</code> i <code>getElementsByTagName</code>. Możesz użyć tabeli.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metoda</th>
+                    <th>Opis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>document.getElementById("nazwa")</code></td>
+                    <td>Zwraca element o podanej wartości atrybutu <code>id</code>. Identyfikator powinien być unikalny na stronie.</td>
+                </tr>
+                <tr>
+                    <td><code>document.getElementsByTagName("p")</code></td>
+                    <td>Zwraca kolekcję elementów o podanej nazwie znacznika, na przykład wszystkie znaczniki <code>&lt;p&gt;</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>document.getElementsByName("nazwa")</code></td>
+                    <td>Zwraca kolekcję elementów, których atrybut <code>name</code> ma podaną wartość, na przykład elementów formularza.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <p class="pytanie">4. Omów właściwości <code>innerHTML</code>, <code>innerText</code> i <code>className</code> (każdą osobno).</p>
+        <ul>
+            <li><strong><code>innerHTML</code></strong> odczytuje lub ustawia zawartość elementu jako kod HTML. Wstawione znaczniki są interpretowane przez przeglądarkę.</li>
+            <li><strong><code>innerText</code></strong> odczytuje lub ustawia tekst widoczny w elemencie; ustawiona wartość jest traktowana jako tekst, a nie kod HTML.</li>
+            <li><strong><code>className</code></strong> odczytuje lub ustawia wartość atrybutu <code>class</code>, czyli klasę lub klasy CSS elementu.</li>
+        </ul>
+
+        <p>Przykład użycia:</p>
+        <textarea rows="24" cols="50" readonly>&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Przykład dostępu do elementu&lt;/title&gt;
+    &lt;style&gt;
+        .wyroznienieCzerwone {
+            color: red;
+            font-weight: 600;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="nazwa"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        var element = document.getElementById("nazwa");
+        element.innerHTML = "&lt;strong&gt;Witaj&lt;/strong&gt;";
+        element.className = "wyroznienieCzerwone";
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+    </section>
+</body>
+</html>

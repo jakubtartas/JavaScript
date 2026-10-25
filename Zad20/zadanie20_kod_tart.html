@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KOD</title>
+    </head>
+    <body>
+        <script>
+            function okno_zamknij_tartas(){
+            window.close()
+            }
+        </script>
+        <textarea rows="36" cols="100" type="text" readonly> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 20 - długości boków trójkąta</title>
+</head>
+<body>
+    <h1>Długości boków trójkąta</h1>
+    <p>Podaj współrzędne trzech punktów niewspółliniowych:</p>
+
+    <fieldset>
+        <legend>Punkt A</legend>
+        <label for="xa_tar">x<sub>A</sub>:</label>
+        <input type="number" id="xa_tar" step="any">
+        <label for="ya_tar">y<sub>A</sub>:</label>
+        <input type="number" id="ya_tar" step="any">
+    </fieldset>
+
+    <fieldset>
+        <legend>Punkt B</legend>
+        <label for="xb_tar">x<sub>B</sub>:</label>
+        <input type="number" id="xb_tar" step="any">
+        <label for="yb_tar">y<sub>B</sub>:</label>
+        <input type="number" id="yb_tar" step="any">
+    </fieldset>
+
+    <fieldset>
+        <legend>Punkt C</legend>
+        <label for="xc_tar">x<sub>C</sub>:</label>
+        <input type="number" id="xc_tar" step="any">
+        <label for="yc_tar">y<sub>C</sub>:</label>
+        <input type="number" id="yc_tar" step="any">
+    </fieldset>
+
+    <button type="button" onclick="oblicz()">Oblicz długości boków</button>
+    <p id="wynik" aria-live="polite"></p>
+
+    <script>
+        function AB_tar(xa_tar, ya_tar, xb_tar, yb_tar) {
+            return Math.hypot(xb_tar - xa_tar, yb_tar - ya_tar);
+        }
+
+        function BC_tar(xb_tar, yb_tar, xc_tar, yc_tar) {
+            return Math.hypot(xc_tar - xb_tar, yc_tar - yb_tar);
+        }
+
+        function AC_tar(xa_tar, ya_tar, xc_tar, yc_tar) {
+            return Math.hypot(xc_tar - xa_tar, yc_tar - ya_tar);
+        }
+
+        function oblicz() {
+            var xa_tar = document.getElementById("xa_tar").valueAsNumber;
+            var ya_tar = document.getElementById("ya_tar").valueAsNumber;
+            var xb_tar = document.getElementById("xb_tar").valueAsNumber;
+            var yb_tar = document.getElementById("yb_tar").valueAsNumber;
+            var xc_tar = document.getElementById("xc_tar").valueAsNumber;
+            var yc_tar = document.getElementById("yc_tar").valueAsNumber;
+            var wynik = document.getElementById("wynik");
+            var wspolrzedne = [xa_tar, ya_tar, xb_tar, yb_tar, xc_tar, yc_tar];
+
+            if (!wspolrzedne.every(Number.isFinite)) {
+                wynik.textContent = "Wpisz poprawne współrzędne wszystkich trzech punktów.";
+                return;
+            }
+
+            var polePodwojne = (xb_tar - xa_tar) * (yc_tar - ya_tar)
+                - (yb_tar - ya_tar) * (xc_tar - xa_tar);
+
+            if (polePodwojne === 0) {
+                wynik.textContent = "Te punkty są współliniowe i nie tworzą trójkąta.";
+                return;
+            }
+
+            var ab = AB_tar(xa_tar, ya_tar, xb_tar, yb_tar);
+            var bc = BC_tar(xb_tar, yb_tar, xc_tar, yc_tar);
+            var ac = AC_tar(xa_tar, ya_tar, xc_tar, yc_tar);
+
+            wynik.textContent = "AB = " + ab.toFixed(2)
+                + ", BC = " + bc.toFixed(2)
+                + ", AC = " + ac.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+
+        </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
+    </body>
+</html>

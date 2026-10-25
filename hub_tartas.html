@@ -2,6 +2,10 @@
 <html lang="pl">
 <head>
     <style>
+        body{
+            background-color: #ffffff;
+        }
+
         hr {
             margin-top: 14px;
             margin-bottom: 14px;
@@ -124,6 +128,13 @@
             otworzSrodek("Zad19/zadanie19_kod_tart.html", "okienko_z19_kod", 675, 625);
         }
 
+        function WinOpen_z20() {
+            otworzSrodek("Zad20/zadanie20_tart.html", "okienko_z20", 500, 500);
+        }
+        function WinOpen_z20_kod() {
+            otworzSrodek("Zad20/zadanie20_kod_tart.html", "okienko_z20_kod", 675, 625);
+        }
+
         function okno_zamknij() {
             window.close();
         }
@@ -180,6 +191,9 @@
         <hr size="3" width="75%" color="red">
         <input type="button" name="zadanie19" value="zadanie19-tartas" onclick="WinOpen_z19()">
         <input type="button" name="zadanie19_kod" value="zadanie19-kod-tartas" onclick="WinOpen_z19_kod()">
+        <hr size="3" width="75%" color="red">
+        <input type="button" name="zadanie20" value="zadanie20-tartas" onclick="WinOpen_z20()">
+        <input type="button" name="zadanie20_kod" value="zadanie20-kod-tartas" onclick="WinOpen_z20_kod()">
         <hr size="3" width="75%" color="red">
         <input type="button" value="zamknij okno" onclick="okno_zamknij()">
         </div>

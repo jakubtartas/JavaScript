@@ -28,6 +28,10 @@
 
         var sekundy = Math.abs((D2_tar - D1_tar) * 24 * 3600 + (G2_tar - G1_tar) * 3600);
         document.write("<div id='wynik'>Minęło " + sekundy + " sekund.</div>");
+
+        function okno_zamknij_tartas() {
+          window.close();
+        }
     </script>
     <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()"/>
   </body>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczanie sekund KOD</title>
+    </head>
+    <body>
+        <script>
+            function okno_zamknij_tartas(){
+            window.close()
+            }
+        </script>
+        <textarea rows="36" cols="100" type="text" readonly> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sterowanie wydrukami</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 16px;
+            color: rgb(255, 0, 0);
+        }
+
+        input[type="number"] {
+            margin-bottom: 8px;
+        }
+
+        .linia-wyniku {
+            width: 100vw;
+            box-sizing: border-box;
+            margin-left: calc(50% - 50vw);
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sterowanie wydrukami</h1>
+    <label for="liczba-a">Podaj pierwszą liczbę naturalną A:</label>
+    <input type="number" id="liczba-a" min="0" step="1">
+    <br>
+    <label for="liczba-b">Podaj drugą liczbę naturalną B:</label>
+    <input type="number" id="liczba-b" min="0" step="1">
+    <button type="button" onclick="oblicz()">Oblicz</button>
+    <p id="komunikat" aria-live="polite"></p>
+    <p id="wczytane-liczby"></p>
+    <p class="linia-wyniku" id="linia-wyniku"></p>
+
+    <script>
+        function oblicz() {
+            var a = document.getElementById("liczba-a").valueAsNumber;
+            var b = document.getElementById("liczba-b").valueAsNumber;
+            var komunikat = document.getElementById("komunikat");
+            var wczytaneLiczby = document.getElementById("wczytane-liczby");
+            var linia = document.getElementById("linia-wyniku");
+
+            komunikat.textContent = "";
+            wczytaneLiczby.textContent = "";
+            linia.textContent = "";
+
+            if (!Number.isSafeInteger(a) || a < 0 || !Number.isSafeInteger(b) || b < 0) {
+                komunikat.textContent = "Podaj dwie nieujemne liczby naturalne.";
+                return;
+            }
+
+            var aDoKwadratu = a * a;
+            var bDoKwadratu = b * b;
+            var aDoSzescianu = aDoKwadratu * a;
+            var bDoSzescianu = bDoKwadratu * b;
+            var trzyAkwadratB = 3 * aDoKwadratu * b;
+            var trzyAbkwadrat = 3 * a * bDoKwadratu;
+            var suma = (a + b) * (a + b) * (a + b);
+            var obliczenia = [
+                aDoKwadratu, bDoKwadratu, aDoSzescianu, bDoSzescianu,
+                trzyAkwadratB, trzyAbkwadrat, suma
+            ];
+
+            if (!obliczenia.every(Number.isSafeInteger)) {
+                komunikat.textContent = "Wynik jest zbyt duży do dokładnego obliczenia.";
+                return;
+            }
+
+            var zapisWyniku = "(" + a + " + " + b + ")^3 = "
+                + a + "^3 + 3*(" + a + ")^2*(" + b + ") + 3*(" + a + ")*(" + b + ")^2 + " + b + "^3"
+                + " = " + aDoSzescianu + " + " + trzyAkwadratB + " + " + trzyAbkwadrat + " + " + bDoSzescianu
+                + " = " + suma;
+
+            wczytaneLiczby.textContent = "Wczytane liczby: A = " + a + ", B = " + b;
+            linia.textContent = zapisWyniku;
+        }
+    </script>
+</body>
+</html>
+        </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
+    </body>
+</html>

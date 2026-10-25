@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczanie sekund KOD</title>
+    </head>
+    <body>
+        <textarea rows="36" cols="85" type="text" readonly> 
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ile sekund minęło</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        text-align: center;
+        padding-top: 40px;
+      }
+      #wynik {
+        color: rgb(0, 255, 0);
+        font-weight: bold;
+        font-size: 33px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        var D1_tar = prompt("Podaj pierwszy dzień miesiąca styczeń: ");
+        var G1_tar = prompt("Podaj pierwszą godzinę miesiąca styczeń: ");
+        var D2_tar = prompt("Podaj drugi dzień miesiąca styczeń: ");
+        var G2_tar = prompt("Podaj drugą godzinę miesiąca styczeń: ");
+
+        var sekundy = Math.abs((D2_tar - D1_tar) * 24 * 3600 + (G2_tar - G1_tar) * 3600);
+        document.write("<div id='wynik'>Minęło " + sekundy + " sekund.</div>");
+    </script>
+  </body>
+</html>
+        </textarea>
+    </body>
+</html>

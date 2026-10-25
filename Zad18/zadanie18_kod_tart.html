@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczanie sekund KOD</title>
+    </head>
+    <body>
+        <script>
+            function okno_zamknij_tartas(){
+            window.close()
+            }
+        </script>
+        <textarea rows="36" cols="100" type="text" readonly> 
+<!DOCTYPE html>
+
+<head>
+    <title> Użycie fukcji </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div style="color:navy;font-size:50px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+
+            function suma_tar(a, b) {
+                return a + b;
+            }
+            function odejmowanie_tar(a, b) {
+                return a - b;
+            }
+            function mnozenie_tar(a, b) {
+                return a * b;
+            }
+            function od_kwadratu_tar(a, b) {
+                return [a*a, b*b];
+            }
+            function reszta_z_dzielienia_a_przez_b_tar(a, b) {
+                return a % b;
+            }
+
+            document.write("a=" + a + "<br>");
+            document.write("b=" + b + "<br>");
+            document.write("suma=" + suma_tar(a, b) + "<br>");
+            document.write("odejmowanie=" + odejmowanie_tar(a, b) + "<br>");
+            document.write("mnożenie=" + mnozenie_tar(a, b) + "<br>");
+            var kwadraty = od_kwadratu_tar(a, b);
+            document.write("kwadrat a=" + kwadraty[0] + "<br>");
+            document.write("kwadrat b=" + kwadraty[1] + "<br>");
+            document.write("reszta z dzielenia a przez b=" + reszta_z_dzielienia_a_przez_b_tar(a, b) + "<br>");
+        </script>
+    </div>
+</body>
+</html>
+        </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
+    </body>
+</html>

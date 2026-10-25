@@ -39,6 +39,8 @@
     <p id="wczytane-liczby"></p>
     <p class="linia-wyniku" id="linia-wyniku"></p>
 
+<input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()">
+
     <script>
         function oblicz() {
             var a = document.getElementById("liczba-a").valueAsNumber;
@@ -80,6 +82,10 @@
 
             wczytaneLiczby.textContent = "Wczytane liczby: A = " + a + ", B = " + b;
             linia.textContent = zapisWyniku;
+        }
+
+        function okno_zamknij_tartas() {
+            window.close();
         }
     </script>
 </body>

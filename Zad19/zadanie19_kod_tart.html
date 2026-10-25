@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KOD</title>
+    </head>
+    <body>
+        <script>
+            function okno_zamknij_tartas(){
+            window.close()
+            }
+        </script>
+        <textarea rows="36" cols="100" type="text" readonly> 
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function pole_tartas() {
+            var a = parseFloat(document.getElementById('dlugosc').value);
+            var b = a * a;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b.toFixed(2) + " cm^2";
+        }
+        function obwod_tartas() {
+            var a = parseFloat(document.getElementById('dlugosc').value);
+            var b = 4 * a;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+        }
+    </script>
+    <h1>Wszystko o KWADRACIE</h1><br><br>
+    Podaj długość boku: <input type="text" id="dlugosc" value=""> cm<br><br><br>
+    <input type="button" name="pole" value="Oblicz pole" Onclick="pole_tartas()"><br><br>
+    <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_tartas()"><br><br>
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+
+</html>
+        </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_tartas()" />
+    </body>
+</html>
